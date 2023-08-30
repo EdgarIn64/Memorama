@@ -1,0 +1,13 @@
+D:\VisualStudio\proyectos\Memorama\Memorama\bin\Debug\Memorama.exe.config
+D:\VisualStudio\proyectos\Memorama\Memorama\bin\Debug\Memorama.exe
+D:\VisualStudio\proyectos\Memorama\Memorama\bin\Debug\Memorama.pdb
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.csproj.AssemblyReference.cache
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.csproj.SuggestedBindingRedirects.cache
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.Memorama.resources
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.Properties.Resources.resources
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.Resource1.resources
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.csproj.GenerateResource.cache
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.csproj.CoreCompileInputs.cache
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.exe
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.pdb
+D:\VisualStudio\proyectos\Memorama\Memorama\obj\Debug\Memorama.Resource2.resources
