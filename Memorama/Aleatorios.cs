@@ -17,7 +17,7 @@ namespace Memorama
 
         public int generarNumeroAleatorio(int longitud)
         {
-            return this._random.Next(1, longitud + 1);
+            return this._random.Next(0, longitud);
         }
 
         public int[] generarNumerosAleatorios(int longitud)
@@ -35,7 +35,7 @@ namespace Memorama
             return numeros;
         }
 
-        public int[] generarNumerosAleatoriosNoRepetidos(int longitud, int min, int max)
+        public int[] generarNumerosAleatoriosNoRepetidos(int longitud)
         {
             if (longitud <= 0)
             {

@@ -15,8 +15,8 @@ namespace Memorama
     {
         private string[] cartas;
         private string[] colocadas;
-        private PictureBox[] targetImg = new PictureBox[2];
-        private string[] targets = new string[] {"", ""};
+        private PictureBox[] targetImg;
+        private string[] targets;
         private int puntos;
 
         public Memorama()
@@ -28,26 +28,24 @@ namespace Memorama
         {
             this.cartas = new string[] { "garza", "gato", "tortuga", "gusano", "perro", "rana", "rino", "tigre", "topo"};
             this.puntos = cartas.Length;
-            Aleatorios aleatorios = new Aleatorios();
+            this.targetImg = new PictureBox[2];
+            this.targets = new string[] { "", "" };
 
-            int[] lista1 = aleatorios.generarNumerosAleatorios(cartas.Length-1);
-            int[] lista2 = aleatorios.generarNumerosAleatorios(cartas.Length-1);
+            Aleatorios aleatorios = new Aleatorios();
+            int[] lista1 = aleatorios.generarNumerosAleatoriosNoRepetidos(cartas.Length);
+            int[] lista2 = aleatorios.generarNumerosAleatoriosNoRepetidos(cartas.Length);
 
             this.colocadas = new string[lista1.Length + lista2.Length];
-            
+
             for (int i = 0; i < lista1.Length; i++)
-            {
                 colocadas[i] = cartas[lista1[i]];
-            }
 
             for (int i = 0; i < lista2.Length; i++)
-            {
-                colocadas[i] = cartas[lista2[i]];
-            }
+                colocadas[lista1.Length + i] = cartas[lista2[i]];
 
         }
 
-        async private void evaluar(PictureBox img, string nameImg)
+        async private void Evaluar(PictureBox img, string nameImg)
         {
             if (targets[0] == "")
             {
@@ -64,48 +62,178 @@ namespace Memorama
                 }
                 else
                 {
-                    await Task.Delay(750);
+                    await Task.Delay(550);
                     targetImg[0].Image = targetImg[1].Image = (Bitmap)Resource2.oculto;
                 }
                 targets[0] = targets[1] = "";
                 targetImg[0] = targetImg[1] = null;
             }
+            if (puntos == 0)
+            {
+                titulo.Text = "Felicidades";
+            }
         }
 
-        private void img1_Click(object sender, EventArgs e)
+        private void Img1_Click(object sender, EventArgs e)
         {
-            img1.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[0]);
-            evaluar(img1, colocadas[0]);
+            if (targets[1] == "")
+            {
+                img1.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[0]);
+                Evaluar(img1, colocadas[0]);
+            }
         }
 
-        private void img2_Click(object sender, EventArgs e)
+        private void Img2_Click(object sender, EventArgs e)
         {
-            img2.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[1]);
-            evaluar(img2, colocadas[1]);
+            if (targets[1] == "")
+            {
+                img2.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[1]);
+                Evaluar(img2, colocadas[1]);
+            }
         }
 
-        private void img3_Click(object sender, EventArgs e)
+        private void Img3_Click(object sender, EventArgs e)
         {
-            img3.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[2]);
-            evaluar(img3, colocadas[2]);
+            if (targets[1] == "")
+            {
+                img3.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[2]);
+                Evaluar(img3, colocadas[2]);
+            }
         }
 
-        private void img4_Click(object sender, EventArgs e)
+        private void Img4_Click(object sender, EventArgs e)
         {
-            img4.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[3]);
-            evaluar(img4, colocadas[3]);
+            if (targets[1] == "")
+            {
+                img4.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[3]);
+                Evaluar(img4, colocadas[3]);
+            }
         }
 
-        private void img5_Click(object sender, EventArgs e)
+        private void Img5_Click(object sender, EventArgs e)
         {
-            img5.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[4]);
-            evaluar(img5, colocadas[4]);
+            if (targets[1] == "")
+            {
+                img5.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[4]);
+                Evaluar(img5, colocadas[4]);
+            }
         }
 
-        private void img6_Click(object sender, EventArgs e)
+        private void Img6_Click(object sender, EventArgs e)
         {
-            img6.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[5]);
-            evaluar(img6, colocadas[5]);
+            if (targets[1] == "")
+            {
+                img6.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[5]);
+                Evaluar(img6, colocadas[5]);
+            }
+        }
+
+        private void Img7_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img7.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[6]);
+                Evaluar(img7, colocadas[6]);
+            }
+        }
+
+        private void Img8_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img8.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[7]);
+                Evaluar(img8, colocadas[7]);
+            }
+        }
+
+        private void Img9_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img9.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[8]);
+                Evaluar(img9, colocadas[8]);
+            }
+        }
+
+        private void Img10_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img10.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[9]);
+                Evaluar(img10, colocadas[9]);
+            }
+        }
+
+        private void Img11_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img11.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[10]);
+                Evaluar(img11, colocadas[10]);
+            }
+        }
+
+        private void Img12_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img12.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[11]);
+                Evaluar(img12, colocadas[11]);
+            }
+        }
+
+        private void Img13_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img13.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[12]);
+                Evaluar(img13, colocadas[12]);
+            }
+        }
+
+        private void Img14_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img14.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[13]);
+                Evaluar(img14, colocadas[13]);
+            }
+        }
+
+        private void Img15_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img15.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[14]);
+                Evaluar(img15, colocadas[14]);
+            }
+        }
+
+        private void Img16_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img16.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[15]);
+                Evaluar(img16, colocadas[15]);
+            }
+        }
+
+        private void Img17_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img17.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[16]);
+                Evaluar(img17, colocadas[16]);
+            }
+        }
+
+        private void Img18_Click(object sender, EventArgs e)
+        {
+            if (targets[1] == "")
+            {
+                img18.Image = (Bitmap)Resource2.ResourceManager.GetObject(colocadas[17]);
+                Evaluar(img18, colocadas[17]);
+            }
         }
     }
 }
